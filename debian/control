@@ -1,0 +1,15 @@
+Source: python-scratchbox
+Section: python
+Priority: optional
+Maintainer: Ed Bartosh <bartosh@gmail.com>
+Build-Depends: debhelper (>= 4.1.25), python-central, python-setuptools
+XS-Python-Version: all
+Standards-Version: 3.8.0
+
+Package: python-scratchbox
+Architecture: all
+Depends: ${python:Depends}
+Description: Scratchbox API.
+ This module provides scratchbox API scratchbox
+XB-Python-Version: all
+
