@@ -347,10 +347,6 @@ class Scratchbox2(Scratchbox):
         """Returns absolute path to scratchbox temporary directory."""
         return os.path.join(self.get_basedir(), self.dotdir, self.target_name, "tmp")
 
-    def get_sb_tmpdir(self):
-        """Returns path to temporary directory inside scratchbox."""
-        return "tmp"
-
     def get_sb_homedir(self):
         """Returns path to directory inside scratchbox where build is done."""
         return os.path.join(self.get_basedir(), self.dotdir, self.target_name)

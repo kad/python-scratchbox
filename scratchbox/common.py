@@ -148,6 +148,11 @@ class Scratchbox(object):
         """Returns superuser command used inside scratchbox."""
         raise NotImplementedError
 
+    @staticmethod
+    def get_sb_tmpdir(self):
+        """Returns path to temporary directory inside scratchbox."""
+        return "/tmp"
+
     def get_mode_options(self, mode=None):
         """Returns scratchbox options for a given mode."""
         return ""
