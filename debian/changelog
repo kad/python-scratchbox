@@ -1,6 +1,13 @@
+python-scratchbox (0.0.2) unstable; urgency=low
+
+  * splitted to common, sb1 and sb2
+  * moved scratchbox_factory to __init__.py
+
+ -- Ed Bartosh <eduard.bartosh@nokia.com>  Mon, 14 Dec 2009 12:18:25 +0200
+
 python-scratchbox (0.0.1) unstable; urgency=low
 
   * Init
 
- --  <Ed Bartosh <bartosh@gmail.com>>  Fri, 11 Dec 2009 18:57:17 +0200
+ -- Ed Bartosh <bartosh@gmail.com>  Fri, 11 Dec 2009 18:57:17 +0200
 
