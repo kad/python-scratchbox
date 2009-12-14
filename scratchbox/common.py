@@ -25,8 +25,6 @@
 Scratchbox API. Common classes.
 """
 
-__revision__ = "r"+"$Revision$"
-
 import os
 import popen2
 import signal
