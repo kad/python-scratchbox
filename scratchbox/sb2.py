@@ -22,7 +22,7 @@
 #
 
 """
-Scratchbox v.1 python API
+Scratchbox v.2 python API
 """
 
 import os
