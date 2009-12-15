@@ -43,7 +43,7 @@ class Scratchbox1(Scratchbox):
     def lstargets(self):
         """List targets."""
         return self.run("list --targets 2>/dev/null",
-                        exe="sb-conf")[1].split("\n")
+                        exe="sb-conf").split("\n")
 
     def setup(self, target, force=None):
         """Setup target."""
