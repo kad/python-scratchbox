@@ -272,8 +272,7 @@ class Scratchbox2(Scratchbox):
         self.init_target(target_params, mode="devel")
 
         # create session
-        self.session = os.path.join(self.get_sb_homedir(), self.dotdir,
-                "session.%d" % os.getpid())
+        self.session = os.path.join(self.get_sb_homedir(), "session.%d" % os.getpid())
         cmdl = "-m devel -m emulate -c -t %s -S %s " % (target_params["name"],
                                                         self.session)
         if "mappings" in target_params and target_params["mappings"]:
