@@ -272,7 +272,8 @@ class Scratchbox2(Scratchbox):
         self.init_target(target_params, mode="devel")
 
         # create session
-        self.session = os.path.join(self.get_sb_homedir(), "session.%d" % os.getpid())
+        self.session = os.path.join(self.get_basedir(), self.sbdotdir,
+                                    "session.%d" % os.getpid())
         cmdl = "-m devel -m emulate -c -t %s -S %s " % (target_params["name"],
                                                         self.session)
         if "mappings" in target_params and target_params["mappings"]:
@@ -312,7 +313,7 @@ class Scratchbox2(Scratchbox):
 
         # remove target itself and target configuration dirs
         for sdir in (self.dotdir, self.sbdotdir):
-            tdir = os.path.join(self.get_sb_homedir(), sdir, tname)
+            tdir = os.path.join(self.get_basedir(), sdir, tname)
             if os.path.exists(tdir):
                 shutil.rmtree(tdir)
 
@@ -342,7 +343,8 @@ class Scratchbox2(Scratchbox):
 
     def get_tmpdir(self):
         """Returns absolute path to scratchbox temporary directory."""
-        return os.path.join(self.get_basedir(), self.dotdir, self.target_name, "tmp")
+        return os.path.join(self.get_basedir(), self.dotdir,
+                            self.target_name, "tmp")
 
     def get_sb_tmpdir(self):
         """Returns path to temporary directory inside scratchbox."""
