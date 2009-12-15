@@ -72,6 +72,13 @@ class Scratchbox(object):
         if target_name:
             self.select(target_name)
 
+    def set_target_name(self, name):
+        """Set target name.
+           For scratchbox2 it's mandatory to call it before get_sb_* methods
+           because some of them require self.target_name.
+        """
+        self.target_name = name
+
     def killall(self, sig=signal.SIGHUP):
         """Send signal to all sb processes."""
         pass
