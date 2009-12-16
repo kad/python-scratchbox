@@ -335,7 +335,9 @@ class Scratchbox2(Scratchbox):
 
     def get_targetdir(self, target_name=None):
         """Returns absolute path to scratchbox target."""
-        return os.path.join(self.get_basedir(), self.dotdir, self.target_name)
+        if not target_name:
+            target_name = self.target_name
+        return os.path.join(self.get_basedir(), self.dotdir, target_name)
 
     def get_homedir(self):
         """Returns absolute path to directory where build is done."""
